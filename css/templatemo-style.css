@@ -1,0 +1,608 @@
+body
+{
+	background: #000000;
+	color: #999;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+/* start all section */
+#home,
+#home .fp-slide,
+#home .fp-tableCell,
+
+#work,
+#work .fp-slide,
+#work .fp-tableCell,
+
+#about,
+#about .fp-slide,
+#about .fp-tableCell,
+
+#contact,
+#contact .fp-slide,
+#contact .fp-tableCell,
+
+#portfolio,
+#portfolio .fp-slide,
+#portfolio .fp-tableCell,
+
+footer,
+footer .fp-slide,
+footer .fp-tableCell
+{
+    height: auto !important;
+}
+
+/* end all section */
+
+/* start all heading */
+h1,h2,h3,h4,h5
+    {
+        color: #ffffff;
+        font-weight: bold;
+    }
+/* end all heading */
+
+/* start all section */
+#work, #about, #portfolio, #contact
+    {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+/* end all section */
+
+/* start simpletextrotator */
+.rotating {
+  display: inline-block;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
+  -moz-transform: rotateX(0) rotateY(0) rotateZ(0);
+  -ms-transform: rotateX(0) rotateY(0) rotateZ(0);
+  -o-transform: rotateX(0) rotateY(0) rotateZ(0);
+  transform: rotateX(0) rotateY(0) rotateZ(0);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform-origin-x: 50%;
+}
+
+.rotating.flip {
+  position: relative;
+}
+
+.rotating .front, .rotating .back {
+  left: 0;
+  top: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.rotating .front {
+  position: absolute;
+  display: inline-block;
+  -webkit-transform: translate3d(0,0,1px);
+  -moz-transform: translate3d(0,0,1px);
+  -ms-transform: translate3d(0,0,1px);
+  -o-transform: translate3d(0,0,1px);
+  transform: translate3d(0,0,1px);
+}
+
+.rotating.flip .front {
+  z-index: 1;
+}
+
+.rotating .back {
+  display: block;
+  opacity: 0;
+}
+
+.rotating.spin {
+  -webkit-transform: rotate(360deg) scale(0);
+  -moz-transform: rotate(360deg) scale(0);
+  -ms-transform: rotate(360deg) scale(0);
+  -o-transform: rotate(360deg) scale(0);
+  transform: rotate(360deg) scale(0);
+}
+
+.rotating.flip .back {
+  z-index: 2;
+  display: block;
+  opacity: 1;
+  
+  -webkit-transform: rotateY(180deg) translate3d(0,0,0);
+  -moz-transform: rotateY(180deg) translate3d(0,0,0);
+  -ms-transform: rotateY(180deg) translate3d(0,0,0);
+  -o-transform: rotateY(180deg) translate3d(0,0,0);
+  transform: rotateY(180deg) translate3d(0,0,0);
+}
+
+.rotating.flip.up .back {
+  -webkit-transform: rotateX(180deg) translate3d(0,0,0);
+  -moz-transform: rotateX(180deg) translate3d(0,0,0);
+  -ms-transform: rotateX(180deg) translate3d(0,0,0);
+  -o-transform: rotateX(180deg) translate3d(0,0,0);
+  transform: rotateX(180deg) translate3d(0,0,0);
+}
+
+.rotating.flip.cube .front {
+  -webkit-transform: translate3d(0,0,100px) scale(0.9,0.9);
+  -moz-transform: translate3d(0,0,100px) scale(0.85,0.85);
+  -ms-transform: translate3d(0,0,100px) scale(0.85,0.85);
+  -o-transform: translate3d(0,0,100px) scale(0.85,0.85);
+  transform: translate3d(0,0,100px) scale(0.85,0.85);
+}
+
+.rotating.flip.cube .back {
+  -webkit-transform: rotateY(180deg) translate3d(0,0,100px) scale(0.9,0.9);
+  -moz-transform: rotateY(180deg) translate3d(0,0,100px) scale(0.85,0.85);
+  -ms-transform: rotateY(180deg) translate3d(0,0,100px) scale(0.85,0.85);
+  -o-transform: rotateY(180deg) translate3d(0,0,100px) scale(0.85,0.85);
+  transform: rotateY(180deg) translate3d(0,0,100px) scale(0.85,0.85);
+}
+
+.rotating.flip.cube.up .back {
+  -webkit-transform: rotateX(180deg) translate3d(0,0,100px) scale(0.9,0.9);
+  -moz-transform: rotateX(180deg) translate3d(0,0,100px) scale(0.85,0.85);
+  -ms-transform: rotateX(180deg) translate3d(0,0,100px) scale(0.85,0.85);
+  -o-transform: rotateX(180deg) translate3d(0,0,100px) scale(0.85,0.85);
+  transform: rotateX(180deg) translate3d(0,0,100px) scale(0.85,0.85);
+}
+/* end simpletextrotator */
+
+/* start home */       
+#home
+	{
+        background: url('../images/home-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 120px;
+        padding-bottom: 140px;
+        text-align: center;
+	}
+#home h1
+    {
+        border: 2px solid #D43F52;
+        color: #D43F52;
+        display: inline-block;
+        letter-spacing: 6px;
+        padding: 25px 35px;
+        margin: 30px 0;
+    }
+#home h2
+    {
+        padding-bottom: 10px;
+    }
+#home .btn
+    {
+        background: transparent;
+        border: 2px solid #ffffff;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        width: 180px;
+        height: 60px;
+        margin-top: 40px;
+        padding-top: 18px;
+        transition: all 0.4s ease-in-out;
+    }
+#home .btn:hover
+    {
+        background: #D43F52;
+        border-color: transparent;
+    }
+/* end home */
+
+/* start work */
+#work
+    {
+        background: #1a1a1a;
+    }
+#work h2
+    {
+        text-align: center;
+    }
+
+#work .media
+    {
+      margin-top: 30px;
+    }
+	
+#work .media .fa
+    {
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        color: #D43F52;
+        font-size: 24px;
+        margin-right: 24px;
+        width: 60px;
+        height: 60px;
+        line-height: 55px;
+        text-align: center;
+        vertical-align: middle;
+        transition: all 0.4s ease-in;
+    }
+#work .media .fa:hover
+    {
+        background: #ffffff;
+        cursor: pointer;
+    }
+#work .media .media-heading
+    {
+        font-weight: 600;
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+/* end work */
+
+/* start about */
+#about h4
+    {
+        padding: 15px 0;
+		color: #D43F52;
+    }
+#about .progress
+    {
+        border-radius: 4px;
+        background: #ffffff;
+        height: 4px;
+    }
+#about .progress .progress-bar-danger
+    {
+        background: #D43F52;
+    }
+#about .text-top
+    {
+        padding-top: 50px;
+    }
+#about span
+    {
+        color: #ffffff;
+        font-weight: bold;
+        display: block;
+        padding-bottom: 6px;
+    }
+#about small
+    {
+        font-weight: bold;
+        float: right;
+    }
+/* end about */
+
+/* start portfolio */
+#portfolio
+    {
+        background: #1a1a1a;
+        text-align: center;
+    }
+#portfolio h2
+    {
+        padding-bottom: 30px;
+    }
+#portfolio .portfolio-thumb
+    {
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 30px;
+    }
+#portfolio .portfolio-thumb .portfolio-overlay
+    {
+        background: #D43F52;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        padding-top: 60px;
+        transition: all 0.4s ease-in-out;
+    }
+#portfolio .portfolio-thumb:hover .portfolio-overlay
+    {
+        cursor: pointer;
+        opacity: 0.8;
+        transform: scale(0.9);
+    }
+/* end portfolio */
+
+/* start contact */
+#contact {
+    padding: 50px 0;
+    background-color: #000000;
+    text-align: center; /* Ensure all text inside this section is aligned to the left */
+}
+
+#contact .contact-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+
+#contact .contact__information {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: flex-start; /* Align to the left */
+}
+
+#contact .contact__icon {
+    font-size: 30px;
+    color: #D43F52;
+    margin-right: 10px;
+}
+
+#contact .contact__information div {
+    text-align: left;  /* Ensure text is aligned left within each block */
+}
+
+#contact .contact__form {
+    background-color: #000000;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact .contact__group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#contact .contact__input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #999;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+}
+
+#contact .contact__input:focus {
+    border-color: #D43F52;
+    outline: none;
+}
+
+#contact .contact__message {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#contact .contact__button {
+    width: 100%;
+    padding: 12px;
+    background-color: #D43F52;
+    color: white;
+    border: 2px solid transparent;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#contact .contact__button:hover {
+    background-color: #ffffff;
+    color: #D43F52;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact .contact__container {
+        grid-template-columns: 1fr;
+    }
+}
+/* end contact */
+
+
+/* Footer styles */
+footer {
+    border-top: 1px solid #090909; /* Top border for footer */
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: #090909; /* Black background color */
+    color: white; /* White text color */
+}
+
+footer hr {
+    width: 100px; /* Width for the horizontal line */
+    margin: 20px auto; /* Center the line */
+    border: 1px solid #e74c3c; /* Optional red color for the line */
+}
+
+/* Social media icons list styling */
+ul.social-icon {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+ul.social-icon li {
+    display: inline; /* Display list items horizontally */
+    margin: 0 10px; /* Space between icons */
+}
+
+ul.social-icon li a {
+    color: white; /* Icon color */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+/* Hover effect for social icons */
+ul.social-icon li a:hover {
+    color: #e74c3c; /* Red hover color for icons */
+}
+
+/* Base styling for buttons */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border: 2px solid transparent; /* Transparent border initially */
+    border-radius: 50px; /* Pill shape */
+    background-color: #e74c3c; /* Base red color */
+    color: white; /* Keep text white */
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+}
+
+/* Hover effect for buttons, keeping red background */
+.button:hover {
+    background-color: #e74c3c; /* Red color stays on hover */
+    border-color: #c0392b; /* Darker red border on hover */
+    transform: scale(1.05) translateY(-5px); /* Slight grow and lift for 3D effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow for hover */
+}
+
+/* Active (click) effect */
+.button:active {
+    transform: scale(0.98) translateY(-2px); /* Shrinks a bit when clicked */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow when pressed */
+}
+
+/* Icon animation on hover */
+.button .button__icon {
+    margin-left: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for icon */
+.button:hover .button__icon {
+    transform: translateX(8px); /* Moves icon smoothly when hovered */
+}
+
+/* Pulse effect on button hover */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button:hover {
+    animation: pulse 0.8s ease-in-out infinite; /* Adding the pulse animation */
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 767px) {
+    .button {
+        font-size: 14px; /* Smaller text on mobile */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+.cv-link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Tooltip container */
+.cv-link {
+    position: relative;
+    color: black; /* Default color for text */
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid transparent; /* Transparent border initially */
+    transition: all 0.3s ease-in-out;
+}
+
+/* DЯΛᄃ hover effect */
+.cv-link:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid white;
+}
+
+/* Tooltip text */
+.tooltip-text {
+    visibility: hidden;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10;
+}
+
+/* Show tooltip on hover */
+.cv-link:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* New hover effect for text like 𝕲𝖔𝖉'𝖘 𝕻𝖑𝖆𝖓 and 𝖄𝖓'𝖙 𝖜𝖎𝖓 𝕾𝖎𝖑𝖛𝖊𝖗 */
+.text-hover {
+    position: relative;
+    display: inline-block;
+    color: white; /* Default text color */
+    transition: color 0.4s ease, transform 0.4s ease, text-decoration 0.4s ease, box-shadow 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* Hover effects with inverted color scheme */
+.text-hover:hover {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, black, white); /* Black inside, white outside gradient */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.8); /* Glowing effect */
+    transform: scale(1.1); /* Slightly scale up */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2); /* Add shadow around the text */
+}
+
+/* Additional text animations for smooth transition */
+.text-hover:hover {
+    color: #fff;
+    animation: glow 1s ease-in-out infinite;
+}
+
+/* Glowing animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.8);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* DЯΛᄃ specific hover effect with black text */
+.cv-link a:hover {
+    color: black; /* Black text color */
+    background-color: white; /* White background */
+    border: 2px solid white; /* White border */
+}
